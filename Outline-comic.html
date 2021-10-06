@@ -1,0 +1,151 @@
+<!-- things to note:
+	o the rooms streched when resized, should they stack instead
+	o the roof's interactivity is problamatic
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>oultine</title>
+
+	<style type="text/css">
+
+		/*not my code*/
+		.triangle {
+		    border-color: transparent transparent black transparent;
+		    border-style: solid;
+		    border-width: 0px 200px 200px 200px;
+		    height: 0px;
+		    width: 0px;
+		}
+		/*not my code*/
+
+
+
+		.houseContainer {
+			display: grid;
+			grid-template-rows: 150px 150px 150px 150px 150px;
+			grid-template-columns: repeat(4, 1fr);
+
+
+			grid-gap: 10px 20px;	/*gap between row col*/
+
+			margin-right: 50px;
+			margin-left: 50px;
+
+		}
+
+		/*roof*/
+		.roof {
+			grid-row: 1 / 3; /*specify the starting/ending row*/
+			grid-column: 1 / 5; /*specify the starting/ending col*/
+			justify-self: strech;
+			align-self: end;
+			order: 99;
+		}
+
+		/*rooms*/
+		#room1 {
+			grid-row: 3 / 4; /*specify the starting/ending row*/
+			grid-column: 1 / 3; /*specify the starting/ending col*/
+			background: #030303;
+		}
+
+		.room2 {
+			grid-row: 3 / 4; /*specify the starting/ending row*/
+			grid-column: 3 / 5; /*specify the starting/ending col*/
+			background: #030303;
+		}
+
+		.room3 {
+			grid-row: 4 / 5; /*specify the starting/ending row*/
+			grid-column: 1 / 3; /*specify the starting/ending col*/
+			background: #030303;
+		}
+
+		.room4 {
+			grid-row: 4 / 5; /*specify the starting/ending row*/
+			grid-column: 3 / 5; /*specify the starting/ending col*/
+			background: #030303;
+		}
+		.room5 {
+			grid-row: 5 / 6; /*specify the starting/ending row*/
+			grid-column: 1 / 3; /*specify the starting/ending col*/
+			background: #030303;
+		}
+
+		.room6 {
+			grid-row: 5 / 6; /*specify the starting/ending row*/
+			grid-column: 3 / 5; /*specify the starting/ending col*/
+			background: #030303;
+
+			/*border:5px solid #ffffff; to add borders to frames*/
+		}
+		/*end rooms*/
+
+		.roomNames{
+			text-align: center;
+			font-size: 20pt;
+			color: white;
+		}
+
+		#lightbulb{
+			display: none;
+			height: 50%;
+		}
+
+
+		/*reset body attribute*/
+		body{
+			padding: 0;
+			margin: 0;
+			background: #dadada;
+		}
+
+
+	</style>
+</head>
+<body>
+
+
+
+
+
+
+<!-- grid container that contains the div that contains the rooms and so on-->
+<div class="houseContainer"> 
+
+	<!-- roof -->
+	<div class="roof">
+		<object type="image/svg+xml" data="roof.svg"> </object>
+	</div>
+
+	<!-- the rooms -->
+	<div id="room1" onclick="myFunction()">
+		<object type="image/svg+xml" data="lightbulb.svg" id="lightbulb"> </object>
+		<p class="roomNames">room 1</p> 
+	</div>
+	<div class="room2" ><p class="roomNames"> room 2</p> </div>
+	<div class="room3" ><p class="roomNames"> room 3</p> </div>
+	<div class="room4" ><p class="roomNames"> room 4</p> </div>
+	<div class="room5" ><p class="roomNames"> room 5</p> </div>
+	<div class="room6" ><p class="roomNames"> room 6</p> </div>
+</div>
+
+
+<script type="text/javascript">
+	// get the elements from html
+	const room1 = document.getElementById('room1');
+	const light = document.getElementById('lightbulb');
+
+	function myFunction(){
+		room1.style.background = "#ffffff";
+		light.style.display = "inline"
+		console.log("function works");
+	}
+</script>
+
+</body>
+</html>
