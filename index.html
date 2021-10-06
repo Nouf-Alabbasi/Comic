@@ -53,30 +53,30 @@
 			background: #030303;
 		}
 
-		.room2 {
+		#room2 {
 			grid-row: 3 / 4; /*specify the starting/ending row*/
 			grid-column: 3 / 5; /*specify the starting/ending col*/
 			background: #030303;
 		}
 
-		.room3 {
+		#room3 {
 			grid-row: 4 / 5; /*specify the starting/ending row*/
 			grid-column: 1 / 3; /*specify the starting/ending col*/
 			background: #030303;
 		}
 
-		.room4 {
+		#room4 {
 			grid-row: 4 / 5; /*specify the starting/ending row*/
 			grid-column: 3 / 5; /*specify the starting/ending col*/
 			background: #030303;
 		}
-		.room5 {
+		#room5 {
 			grid-row: 5 / 6; /*specify the starting/ending row*/
 			grid-column: 1 / 3; /*specify the starting/ending col*/
 			background: #030303;
 		}
 
-		.room6 {
+		#room6 {
 			grid-row: 5 / 6; /*specify the starting/ending row*/
 			grid-column: 3 / 5; /*specify the starting/ending col*/
 			background: #030303;
@@ -85,7 +85,7 @@
 		}
 		/*end rooms*/
 
-		.roomNames{
+		#roomNames{
 			text-align: center;
 			font-size: 20pt;
 			color: white;
@@ -127,11 +127,11 @@
 		<object type="image/svg+xml" data="lightbulb.svg" id="lightbulb"> </object>
 		<p class="roomNames">room 1</p> 
 	</div>
-	<div class="room2" onclick="turnONlight(room2)"><p class="roomNames"> room 2</p> </div>
-	<div class="room3" onclick="turnONlight(room3)"><p class="roomNames"> room 3</p> </div>
-	<div class="room4" onclick="turnONlight(room4)"><p class="roomNames"> room 4</p> </div>
-	<div class="room5" onclick="turnONlight(room5)"><p class="roomNames"> room 5</p> </div>
-	<div class="room6" onclick="turnONlight(room6)"><p class="roomNames"> room 6</p> </div>
+	<div id="room2" onclick="turnONlight(room2)"><p class="roomNames"> room 2</p> </div>
+	<div id="room3" onclick="turnONlight(room3)"><p class="roomNames"> room 3</p> </div>
+	<div id="room4" onclick="turnONlight(room4)"><p class="roomNames"> room 4</p> </div>
+	<div id="room5" onclick="turnONlight(room5)"><p class="roomNames"> room 5</p> </div>
+	<div id="room6" onclick="turnONlight(room6)"><p class="roomNames"> room 6</p> </div>
 </div>
 
 
