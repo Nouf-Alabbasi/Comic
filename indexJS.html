@@ -5,8 +5,6 @@
 
  -->
 
- <!-- this version uses Jquery-->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -125,80 +123,61 @@
 	</div>
 
 	<!-- the rooms -->
-	<div id="room1" >
+	<div id="room1" onclick="turnONlight(room1, lightbulb1)">
 		<object type="image/svg+xml" data="lightbulb.svg" class="lightbulb" id="lightbulb1"> </object>
 		<p id="roomNames">room 1</p> 
 	</div>
 
-	<div id="room2">
+	<div id="room2" onclick="turnONlight(room2, lightbulb2)">
 		<object type="image/svg+xml" data="lightbulb.svg" class="lightbulb" id="lightbulb2"> </object>
 		<p id="roomNames"> room 2</p> </div>
 
 
-	<div id="room3">
+	<div id="room3" onclick="turnONlight(room3, lightbulb3)">
 		<object type="image/svg+xml" data="lightbulb.svg" class="lightbulb" id="lightbulb3"> </object>
 		<p id="roomNames"> room 3</p> </div>
 
 
-	<div id="room4" >
+	<div id="room4" onclick="turnONlight(room4, lightbulb4)">
 		<object type="image/svg+xml" data="lightbulb.svg" class="lightbulb" id="lightbulb4"> </object>
 		<p id="roomNames"> room 4</p> </div>
 
 
-	<div id="room5" >
+	<div id="room5" onclick="turnONlight(room5, lightbulb5)">
 		<object type="image/svg+xml" data="lightbulb.svg" class="lightbulb" id="lightbulb5"> </object>
 		<p id="roomNames"> room 5</p> </div>
 
 
-	<div id="room6">
+	<div id="room6" onclick="turnONlight(room6, lightbulb6)">
 		<object type="image/svg+xml" data="lightbulb.svg" class="lightbulb" id="lightbulb6"> </object>
 		<p id="roomNames"> room 6</p> </div>
 </div>
 
 <script src="jquery-3.6.0.slim.js"></script>
 <script type="text/javascript">
+	
+	
+	// get the elements from html
+	const room1 = document.getElementById('room1');
+	const room2 = document.getElementById('room2');
+	const room3 = document.getElementById('room3');
+	const room4 = document.getElementById('room4');
+	const room5 = document.getElementById('room5');
+	const room6 = document.getElementById('room6');
+	const light1 = document.getElementById('lightbulb1');
+	const light2 = document.getElementById('lightbulb2');
+	const light3 = document.getElementById('lightbulb3');
+	const light4 = document.getElementById('lightbulb4');
+	const light5 = document.getElementById('lightbulb5');
+	const light6 = document.getElementById('lightbulb6');
 
 
-	$(document).ready(function(){
-
-		// turn light for each room; change color and add room content
-		$("#room1").hover(function(){
-			$("#room1").css("background","#FBFBF8");
-			$("#lightbulb1").css("display","inline");
-			console.log("room1 hovered over");
-		});
-
-		$("#room2").hover(function(){
-			$("#room2").css("background","#FBFBF8");
-			$("#lightbulb2").css("display","inline");
-			console.log("room1 hovered over");
-		});
-
-		$("#room3").hover(function(){
-			$("#room3").css("background","#FBFBF8");
-			$("#lightbulb3").css("display","inline");
-			console.log("room3 hovered over");
-		});
-
-		$("#room4").hover(function(){
-			$("#room4").css("background","#FBFBF8");
-			$("#lightbulb4").css("display","inline");
-			console.log("room4 hovered over");
-		});
-
-		$("#room5").hover(function(){
-			$("#room5").css("background","#FBFBF8");
-			$("#lightbulb5").css("display","inline");
-			console.log("room5 hovered over");
-		});
-
-		$("#room6").hover(function(){
-			$("#room6").css("background","#FBFBF8");
-			$("#lightbulb6").css("display","inline");
-			console.log("room6 hovered over");
-		});
-	});
-
+	function turnONlight(room, light){
+		room.style.background = "#ffffff";
+		// $("#light").show();
+		light.style.display = "inline"
+		console.log("function works");
+	}
 </script>
 
 </body>
