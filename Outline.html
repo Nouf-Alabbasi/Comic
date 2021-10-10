@@ -1,0 +1,211 @@
+<!-- things to note:
+	o the rooms streched when resized, should they stack instead
+	o the roof's interactivity is problamatic
+	o add light to roof
+
+ -->
+
+ <!-- this version uses Jquery-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>oultine</title>
+	<style type="text/css">
+
+		/*not my code*/
+		.triangle {
+		    border-color: transparent transparent black transparent;
+		    border-style: solid;
+		    border-width: 0px 200px 200px 200px;
+		    height: 0px;
+		    width: 0px;
+		}
+		/*not my code*/
+
+
+
+		.houseContainer {
+			display: grid;
+			grid-template-rows: 150px 150px 150px 150px 150px;
+			grid-template-columns: repeat(4, 1fr);
+
+
+			grid-gap: 10px 20px;	/*gap between row col*/
+
+			margin-right: 50px;
+			margin-left: 50px;
+
+		}
+
+		/*roof*/
+		.roof {
+			grid-row: 1 / 3; /*specify the starting/ending row*/
+			grid-column: 1 / 5; /*specify the starting/ending col*/
+			justify-self: strech;
+			align-self: end;
+			order: 99;
+		}
+
+		/*rooms*/
+		#room1 {
+			grid-row: 3 / 4; /*specify the starting/ending row*/
+			grid-column: 1 / 3; /*specify the starting/ending col*/
+			background: #030303;
+		}
+
+		#room2 {
+			grid-row: 3 / 4; /*specify the starting/ending row*/
+			grid-column: 3 / 5; /*specify the starting/ending col*/
+			background: #030303;
+		}
+
+		#room3 {
+			grid-row: 4 / 5; /*specify the starting/ending row*/
+			grid-column: 1 / 3; /*specify the starting/ending col*/
+			background: #030303;
+		}
+
+		#room4 {
+			grid-row: 4 / 5; /*specify the starting/ending row*/
+			grid-column: 3 / 5; /*specify the starting/ending col*/
+			background: #030303;
+		}
+		#room5 {
+			grid-row: 5 / 6; /*specify the starting/ending row*/
+			grid-column: 1 / 3; /*specify the starting/ending col*/
+			background: #030303;
+		}
+
+		#room6 {
+			grid-row: 5 / 6; /*specify the starting/ending row*/
+			grid-column: 3 / 5; /*specify the starting/ending col*/
+			background: #030303;
+
+			/*border:5px solid #ffffff; to add borders to frames*/
+		}
+		/*end rooms*/
+
+		#roomNames{
+			text-align: center;
+			font-size: 20pt;
+			color: white;
+		}
+
+		.lightbulb{
+			display: none;
+			height: 50%;
+		}
+
+
+		/*reset body attribute*/
+		body{
+			padding: 0;
+			margin: 0;
+			background: #dadada;
+		}
+
+
+	</style>
+</head>
+<body>
+
+
+
+
+
+
+<!-- grid container that contains the div that contains the rooms and so on-->
+<div class="houseContainer"> 
+
+	<!-- roof -->
+	<div class="roof" id="roof">
+		<object type="image/svg+xml" data="roof.svg"> </object>
+	</div>
+
+	<!-- the rooms -->
+	<div id="room1" >
+		<object type="image/svg+xml" data="lightbulb.svg" class="lightbulb" id="lightbulb1"> </object>
+		<p id="roomNames">room 1</p> 
+	</div>
+
+	<div id="room2">
+		<object type="image/svg+xml" data="lightbulb.svg" class="lightbulb" id="lightbulb2"> </object>
+		<p id="roomNames"> room 2</p> </div>
+
+
+	<div id="room3">
+		<object type="image/svg+xml" data="lightbulb.svg" class="lightbulb" id="lightbulb3"> </object>
+		<p id="roomNames"> room 3</p> </div>
+
+
+	<div id="room4" >
+		<object type="image/svg+xml" data="lightbulb.svg" class="lightbulb" id="lightbulb4"> </object>
+		<p id="roomNames"> room 4</p> </div>
+
+
+	<div id="room5" >
+		<object type="image/svg+xml" data="lightbulb.svg" class="lightbulb" id="lightbulb5"> </object>
+		<p id="roomNames"> room 5</p> </div>
+
+
+	<div id="room6">
+		<object type="image/svg+xml" data="lightbulb.svg" class="lightbulb" id="lightbulb6"> </object>
+		<p id="roomNames"> room 6</p> </div>
+</div>
+
+<script src="jquery-3.6.0.slim.js"></script>
+<script type="text/javascript">
+
+
+	$(document).ready(function(){
+
+		// turn light for each room; change color and add room content
+		$("#room1").hover(function(){
+			$("#room1").css("background","#FBFBF8");
+			$("#lightbulb1").css("display","inline");
+			console.log("room1 hovered over");
+		});
+
+		$("#room2").hover(function(){
+			$("#room2").css("background","#FBFBF8");
+			$("#lightbulb2").css("display","inline");
+			console.log("room1 hovered over");
+		});
+
+		$("#room3").hover(function(){
+			$("#room3").css("background","#FBFBF8");
+			$("#lightbulb3").css("display","inline");
+			console.log("room3 hovered over");
+		});
+
+		$("#room4").hover(function(){
+			$("#room4").css("background","#FBFBF8");
+			$("#lightbulb4").css("display","inline");
+			console.log("room4 hovered over");
+		});
+
+		$("#room5").hover(function(){
+			$("#room5").css("background","#FBFBF8");
+			$("#lightbulb5").css("display","inline");
+			console.log("room5 hovered over");
+		});
+
+		$("#room6").hover(function(){
+			$("#room6").css("background","#FBFBF8");
+			$("#lightbulb6").css("display","inline");
+			console.log("room6 hovered over");
+		});
+
+		// $("#roof").hover(function(){
+		// 	$("#roofs").attr("fill", "#ccc");
+		// 	// $("#roof").css("background","#FBFBF8");
+		// 	console.log("roof hovered over");
+		// });
+	});
+
+</script>
+
+</body>
+</html>
