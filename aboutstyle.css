@@ -1,0 +1,26 @@
+/* background color */
+body{
+background-color: #fffbf8;
+}
+
+/* color and font of headings */
+.block0{
+  font-family: "Eater";
+  color: #FF0000;
+  font-size: 30px;
+}
+
+/* font, size and color of paragraph */
+p{
+  font-family: "ZCOOL KuaiLe";
+  font-size: 25px;
+  color: #424949;
+}
+
+/* boarder of image and paragraph */
+.block1{
+  padding: 8px;
+  margin: 25px;
+  border: 10px solid #FFFF00;
+  border-radius: 10px;
+}
