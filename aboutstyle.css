@@ -24,3 +24,38 @@ p{
   border: 10px solid #FFFF00;
   border-radius: 10px;
 }
+
+#footerC{
+  position:relative;
+  display: inline-flex;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: dimgray;
+  opacity: 0.9;
+  height: 50px;
+  width: 100%;
+  z-index: 9999;
+}
+
+#footerText{
+  font-size: 20px;
+  color: black;
+  margin-right: 50px;
+  text-align: center;
+}
+
+
+a{
+  text-decoration: none;
+
+}
+#footerText:hover{
+  color: white;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
