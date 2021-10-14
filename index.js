@@ -57,11 +57,6 @@ $(document).ready(function(){
 			//print this on consol to ensure that code is working
 			console.log("room1 hovered over");
 
-
-			// room.setAttribute('transform','translate(-500,-300)');
-			// room.setAttribute("transform", "scale(3)");
-			// $("#C1").attr({ height: "200%"});
-
 			//room 2
 			$("#R2").hover(function(){
 				$("#_2").css("display","none");
