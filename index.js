@@ -1,7 +1,11 @@
 const BooAudio = new Audio('BooSound.m4a');
+var room = document.getElementById("C1");
 
 $("#footerC").hide();
+
+
 $(document).ready(function(){
+
 
 	$("#button").mouseover(function(){
 		$("#button").css("background", "#ff2020");
@@ -22,7 +26,7 @@ $(document).ready(function(){
 		// change the text and increase height of button and display start button
 		$("#button").animate({height:500},1000);
 		$("#button").css('top', '-=300');
-		$("#button").html("<p>A family Moves in to a house <br> little do they know that their world is about to turn upside down <br> <br> follow the sign on the entrance and hover over each room to go through the comic! <br> click on the comic panels to zoom in!</p>");
+		$("#button").html("<p>A family Moves in to a house <br> little do they know that their world is about to turn upside down <br> <br> follow the sign on the entrance and hover over each room to go through the comic! <br> once you have explored all rooms hover over the comic panels to zoom in!</p>");
 		
 		$("#housey").animate({ opacity: 1 }, 100);
 		$("#StartButton").css("display","inline");
@@ -41,34 +45,44 @@ $(document).ready(function(){
 
 		//room 1
 		$("#R1").hover(function(){
-			// make the outlines and signs that guide the user disappear 
+			// make the outlines disappear
 			$("#_1,#O1").css("display","none");
 
 			//make the comic panel appear and the next order guide
 			$("#C1, #O2").css("display","inline");
 
+			// remove signs that guide the user 
+			$("#O2").remove();
+
 			//print this on consol to ensure that code is working
 			console.log("room1 hovered over");
 
 
+			// room.setAttribute('transform','translate(-500,-300)');
+			// room.setAttribute("transform", "scale(3)");
+			// $("#C1").attr({ height: "200%"});
+
 			//room 2
 			$("#R2").hover(function(){
-				$("#_2, #O2").css("display","none");
+				$("#_2").css("display","none");
 				$("#C2, #O3").css("display","inline");
+				$("#O2").remove();
 
 				console.log("room2 hovered over");
 
 				//room 3
 				$("#R3").hover(function(){
-					$("#_3,#O3").css("display","none");
+					$("#_3").css("display","none");
 					$("#C3, #O4").css("display","inline");
+					$("#O3").remove();
 
 					console.log("room3 hovered over");
 
 					//room 4
 					$("#R4").hover(function(){
-						$("#_4,#O4").css("display","none");
+						$("#_4").css("display","none");
 						$("#C4, #O5, #C3pt2").css("display","inline");
+						$("#O4").remove();
 
 						//make the "mom" text in panel 3 disappear 
 						$("#C3pt2").fadeOut(1500);
@@ -77,10 +91,9 @@ $(document).ready(function(){
 
 						//room 5
 						$("#R5").hover(function(){
-							$("#_5, #O5").css("display","none");
-
-
+							$("#_5").css("display","none");
 							$("#C5, #O6, #C6").css("display","inline");
+							$("#O5").remove();
 
 							// make image appear and disappear suddenly and play boo audio
 							function suddenDisappear(){
@@ -97,7 +110,8 @@ $(document).ready(function(){
 
 							//room 6
 							$("#R6").hover(function(){
-								$("#_6, #O6").css("display","none");
+								$("#_6").css("display","none");
+								$("#O6").remove();
 
 								//appear and disappear effect in panel 6
 								$("#C7pt2").css("display","inline");
@@ -108,13 +122,67 @@ $(document).ready(function(){
 
 								// display footer
 								$("#footerC").fadeIn( "slow");
+
+								// _____________________________________________________________
+								// zoom in effect
+
+								// room1
+								$("#C1").mouseover(function(){
+									$("#Z1").css("display","inline");
+								});
+								$("#C1").mouseout(function(){
+									$("#Z1").css("display","none");
+								});
+
+								// room2
+								$("#C2").mouseover(function(){
+									$("#Z2").css("display","inline");
+								});
+								$("#C2").mouseout(function(){
+									$("#Z2").css("display","none");
+								});
+
+								// room3
+								$("#C3").mouseover(function(){
+									$("#Z3").css("display","inline");
+									$("#C3").css("display","none");
+								});
+								$("#C3").mouseout(function(){
+									$("#Z3").css("display","none");
+									$("#C3").css("display","inline");
+								});
+
+								// room4
+								$("#C4").mouseover(function(){
+									$("#Z4").css("display","inline");
+								});
+
+								$("#C4").mouseout(function(){
+									$("#Z4").css("display","none");
+								});
+
+								// room5
+								$("#C5").mouseover(function(){
+									$("#Z5").css("display","inline");
+								});
+								$("#C5").mouseout(function(){
+									$("#Z5").css("display","none");
+								});
+
+								// room6
+								$("#C6").mouseover(function(){
+									$("#Z6").css("display","inline");
+								});
+								$("#C6").mouseout(function(){
+									$("#Z6").css("display","none");
+								});
+
+
 							});
 						});
 					});
 				});
 			});
-
 		});
-		// _____________________________________________________________
 	});
 });

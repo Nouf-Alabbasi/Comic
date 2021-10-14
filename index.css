@@ -1,7 +1,8 @@
 /*start off with invisible panels*/
-#C1, #C2, #C3, #C3pt2, #C4, #C5, #C6, #C7pt1, #C7pt2, #O2, #O3, #O4, #O5, #O6{
+#C1, #C2, #C3, #C3pt2, #C4, #C5, #C6, #C7pt1, #C7pt2, #O2, #O3, #O4, #O5, #O6, #Z1, #Z2, #Z3, #Z4, #Z5, #Z6 {
 	display: none;
 }
+
 
 #housey{
 	opacity: 40%;
@@ -36,7 +37,7 @@ p{
 
 #StartButton{
 	text-align: center;
-	font-size: 400%;
+	font-size: 300%;
 	height: 10%;
 	width: 400px;
 	background: red;
@@ -46,19 +47,13 @@ p{
 	bottom: 5%;
 	position: absolute;
 	display: none;
+	font-family: 'Eater', cursive;
 }
+
 #StartButton:hover{
-	text-align: center;
-	font-size: 400%;
-	height: 10%;
-	width: 400px;
+
 	background: black;
 	color: white;
-	border-radius: 30px;
-	left: 50%;
-	margin-left: -200px;
-	bottom: 5%;
-	position: absolute;
 }
 
 body{
