@@ -52,7 +52,7 @@ $(document).ready(function(){
 			$("#C1, #O2").css("display","inline");
 
 			// remove signs that guide the user 
-			$("#O2").remove();
+			$("#O1").remove();
 
 			//print this on consol to ensure that code is working
 			console.log("room1 hovered over");
