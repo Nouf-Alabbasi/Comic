@@ -170,13 +170,14 @@ $(document).ready(function(){
 								});
 
 								// room6
-								$("#C6").mouseover(function(){
+								$("#C7pt2").mouseover(function(){
 									$("#Z6").css("display","inline");
+									$("#C7pt1").css("display","none");
 								});
-								$("#C6").mouseout(function(){
+								$("#C7pt2").mouseout(function(){
 									$("#Z6").css("display","none");
+									$("#C7pt1").css("display","inline");
 								});
-
 
 							});
 						});
