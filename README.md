@@ -1,5 +1,11 @@
 # Assignment #2: Comic Strip
 
+## Group Members:
+- Yasmin Alshurafa
+- Nouf Alabbasi
+- Gopika Krishnan
+- Thais Alvarenga Medina
+
 ## Project name:
 
 Carlos in WonderClown
