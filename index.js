@@ -23,6 +23,9 @@ $(document).ready(function(){
 		$("#button").css("background", "#161616");
 		$("#button").unbind('mouseover mouseover');
 
+		//stop allowing button click
+		$("#button").off('click');
+
 		// change the text and increase height of button and display start button
 		$("#button").animate({height:500},1000);
 		$("#button").css('top', '-=300');
